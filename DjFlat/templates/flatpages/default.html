@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>{{ flatpage.title }}</title>
+        <title>{% block title %} {% endblock title %}</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -36,6 +36,9 @@
                        <li class="nav-item">
                            <a class="nav-link" href="/contacts/">Contacts</a>
                        </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="/double/">Double</a>
+                       </li>
                    </ul>
                </div>
            </div>
@@ -43,7 +46,7 @@
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1> {{ flatpage.content }} </h1>
+                <h1>{% block body %} {% endblock body %}</h1>
             </div>
         </div>
     </body>
